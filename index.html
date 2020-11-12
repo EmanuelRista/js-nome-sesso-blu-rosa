@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="box">
+      <h1>Benvenuto su AsianDate.org&copy;</h1>
+      <h2>Il miglior sito per trovare la tua anima gemella asiatica</h2>
+      <img class="girls" src="asiangirl1.jpg" alt=""></br>
+      <label for="name">Come ti chiami?</label>
+      <input type="text" id="name" name="name" placeholder="Inserisci qui il tuo nome" value="">
+      <button type="button" id="my_button" name="button">Click</button>
+      <p id="greeting"></p>
+      <p>Sei un uomo o una donna?</p>
+      <form class="" action="" method="post">
+        <label for="male">Maschio</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female">Femmina</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <button type="button" id="gender_button" name="button">Click</button>
+      </form>
+      <p id="genderGreeting"></p>
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById('my_button').addEventListener('click', displayGreeting)
+      function displayGreeting() {
+        var visitorName = document.getElementById('name').value;
+        while (visitorName === "") {
+          alert("Attenzione: non hai inserito il nome");
+          document.getElementById("name").value = "";
+          break
+        };//validazione (Se la stringa è vuota si incazza)
+        while (visitorName !== "") {
+          document.getElementById('greeting').innerHTML =  "Ciao " + visitorName;
+          document.getElementById('name').value = ""; //reset imparato!
+          break
+        };//validazione (se la stringa è piena è contento)
+      };
+      document.getElementById('gender_button').addEventListener('click', displayGender);
+      function displayGender() {
+        if(document.getElementById('male').checked) {
+          document.getElementById('genderGreeting').innerHTML =  "Sei un uomo? Bene! Puoi cominciare a rimorchiare donne asiatiche!";
+          var genderGreetingEl = document.getElementById('genderGreeting');
+          genderGreetingEl.classList.remove("text-pink");
+          genderGreetingEl.classList.add("text-blue");
+        } else if (document.getElementById('female').checked) {
+          document.getElementById('genderGreeting').innerHTML =  "Sei una donna? Bene! Puoi cominciare a rimorchiare uomini asiatici!";
+          var genderGreetingEl = document.getElementById('genderGreeting');
+          genderGreetingEl.classList.remove("text-blue");
+          genderGreetingEl.classList.add("text-pink");
+        } else {
+          alert("Attenzione: devi selezionare il tuo sesso");
+        };
+      };
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  background-image: url("bg-asian.jpg");
+  background-size: cover;
+}
+input {
+  border-radius: 5px;
+  text-align: center;
+}
+button {
+  border-radius: 5px;
+  background-color: white;
+  border: 0;
+}
+.box {
+  text-align: center;
+  background-color: #ed25e7;
+  margin: 2rem 30%;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+.girls {
+  width: 50%;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.text-blue {
+  color: blue;
+  background-color: white;
+  border-radius: 5px;
+}
+.text-pink {
+  color: red;
+  background-color: white;
+  border-radius: 5px;
+}
